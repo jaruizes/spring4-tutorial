@@ -1,6 +1,5 @@
 package com.jaruiz.springtutorial.chapter01;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -17,8 +16,8 @@ import com.jaruiz.springtutorial.chapter01.contents.MusicBand;
 import com.jaruiz.springtutorial.chapter01.contents.Musician;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=SpringChapter01Config.class)
-public class SpringChapter01ConfigTests {
+@ContextConfiguration(locations = {"classpath:/application-config.xml"})
+public class SpringChapter01XMLConfigTests {
 
 	@Autowired
 	private MusicBand musicBand;

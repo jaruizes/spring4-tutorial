@@ -15,12 +15,6 @@ import com.jaruiz.springtutorial.chapter01.contents.Musician;
 @Configuration
 public class SpringChapter01Config {
 
-	@Bean(name="guitarName")
-	public String guitarName() {
-		return "guitar";
-		
-	}
-	
 	@Bean
 	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 	public Instrument instrument(String name) {

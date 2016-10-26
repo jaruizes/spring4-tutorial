@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context">
+
+	<bean name="guitar" class="com.jaruiz.springtutorial.chapter01.contents.Instrument">
+		<constructor-arg value="guitar"></constructor-arg>
+	</bean>
+	
+	<bean name="guitarrist" class="com.jaruiz.springtutorial.chapter01.contents.Musician">
+		<property name="name" value="guitar"></property>
+		<property name="instrument" ref="guitar"></property>
+	</bean>
+	
+	<bean name="musicBand" class="com.jaruiz.springtutorial.chapter01.contents.MusicBand">
+		<property name="musicians">
+			<list>
+				<bean class="com.jaruiz.springtutorial.chapter01.contents.Musician">
+					<property name="name" value="guitar"></property>
+					<property name="instrument">
+						<bean class="com.jaruiz.springtutorial.chapter01.contents.Instrument">
+							<constructor-arg value="guitar"></constructor-arg>
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.jaruiz.springtutorial.chapter01.contents.Musician">
+					<property name="name" value="piano"></property>
+					<property name="instrument">
+						<bean class="com.jaruiz.springtutorial.chapter01.contents.Instrument">
+							<constructor-arg value="piano"></constructor-arg>
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.jaruiz.springtutorial.chapter01.contents.Musician">
+					<property name="name" value="trumpet"></property>
+					<property name="instrument">
+						<bean class="com.jaruiz.springtutorial.chapter01.contents.Instrument">
+							<constructor-arg value="trumpet"></constructor-arg>
+						</bean>
+					</property>
+				</bean>
+				<bean class="com.jaruiz.springtutorial.chapter01.contents.Musician">
+					<property name="name" value="saxo"></property>
+					<property name="instrument">
+						<bean class="com.jaruiz.springtutorial.chapter01.contents.Instrument">
+							<constructor-arg value="saxo"></constructor-arg>
+						</bean>
+					</property>
+				</bean>
+				<ref bean="guitarrist"/>
+			</list>
+		</property>
+	</bean>
+
+</beans>
