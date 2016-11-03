@@ -12,9 +12,9 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 @EnableAutoConfiguration
-@ComponentScan("com.jaruiz.springtutorial.chapter02")
-@EntityScan("com.jaruiz.springtutorial.chapter02.entities")
-@EnableJpaRepositories("com.jaruiz.springtutorial.chapter02.repositories")
+@ComponentScan("com.jaruiz.springtutorial.chapter03")
+@EntityScan("com.jaruiz.springtutorial.chapter03.entities")
+@EnableJpaRepositories("com.jaruiz.springtutorial.chapter03.repositories")
 public class SpringChapter02Config {
 	
 	@Bean
