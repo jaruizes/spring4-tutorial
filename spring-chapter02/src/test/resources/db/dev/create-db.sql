@@ -1,4 +1,4 @@
-CREATE TABLE books (
+CREATE TABLE Book (
   id  INTEGER PRIMARY KEY,
   isbn VARCHAR(20),
   title VARCHAR(50),
